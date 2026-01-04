@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b0b0f" />
+
+  <title>עיצוב שיער לכלות וערב | YOUR_BRAND</title>
+  <meta name="description" content="עיצוב שיער לכלות וערב – לוקים עמידים, קו נקי ורומנטי, התאמה לשמלה ולמבנה פנים. קביעת תאריך בוואטסאפ." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="עיצוב שיער לכלות וערב | YOUR_BRAND" />
+  <meta property="og:description" content="לוקים עמידים לכל הערב, התאמה אישית וליווי רגוע ביום האירוע. לצפייה בעבודות ולקביעת תאריך." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="he_IL" />
+  <!-- העלי תמונה מייצגת (1200x630) ושימי כאן -->
+  <meta property="og:image" content="assets/og-cover.jpg" />
+
+  <style>
+    :root{
+      --bg:#0b0b0f;
+      --panel:#101018;
+      --panel2:#0f0f16;
+      --text:#f4f4f6;
+      --muted:#b9b9c2;
+      --line:rgba(255,255,255,.10);
+      --accent:#ff4d6d;      /* ורוד */
+      --accent2:#7a1732;     /* בורדו */
+      --accent3:#c21807;     /* אדום (אם תרצי) */
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 26px;
+      --max: 1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(1200px 700px at 80% 0%, rgba(255,77,109,.18), transparent 60%),
+                               radial-gradient(900px 600px at 0% 30%, rgba(122,23,50,.22), transparent 55%),
+                               var(--bg);
+              color:var(--text); font-family: system-ui, -apple-system, "Segoe UI", Arial, "Heebo", sans-serif;}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(11,11,15,.62);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner{display:flex; align-items:center; justify-content:space-between; padding:12px 0; gap:10px}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px}
+    .logo{
+      width:38px;height:38px;border-radius:14px;
+      background: conic-gradient(from 210deg, var(--accent), var(--accent2), var(--accent3), var(--accent));
+      box-shadow: 0 10px 30px rgba(255,77,109,.20);
+    }
+    .nav-links{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-start}
+    .nav-links a{opacity:.86; font-weight:600; font-size:14px}
+    .nav-links a:hover{opacity:1}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:11px 14px; border-radius:14px; border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      color:var(--text); font-weight:800; gap:8px;
+      transition: transform .12s ease, border-color .12s ease, background .12s ease;
+      cursor:pointer;
+    }
+    .btn:hover{transform: translateY(-1px); border-color: rgba(255,255,255,.18)}
+    .btn.primary{
+      border:1px solid rgba(255,77,109,.35);
+      background: linear-gradient(135deg, rgba(255,77,109,.95), rgba(122,23,50,.85));
+      box-shadow: 0 16px 40px rgba(255,77,109,.18);
+    }
+    .btn.primary:hover{border-color: rgba(255,77,109,.55)}
+    .hero{padding:38px 0 10px}
+    .hero-grid{display:grid; grid-template-columns: 1.1fr .9fr; gap:18px; align-items:stretch}
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+    }
+    .hero-left{padding:26px}
+    .kicker{display:inline-flex; gap:8px; align-items:center; font-weight:800; font-size:13px;
+            color: #ffd6df; background: rgba(255,77,109,.12); border:1px solid rgba(255,77,109,.18);
+            padding:7px 10px; border-radius:999px}
+    h1{margin:14px 0 10px; font-size: clamp(28px, 3.4vw, 44px); line-height:1.08}
+    .sub{color:var(--muted); font-size:16px; line-height:1.75; margin:0 0 18px}
+    .hero-ctas{display:flex; gap:10px; flex-wrap:wrap; margin:16px 0 6px}
+    .badges{display:grid; grid-template-columns: repeat(3, 1fr); gap:10px; margin-top:14px}
+    .badge{padding:12px 12px; border-radius:16px; border:1px solid var(--line);
+           background: rgba(16,16,24,.55)}
+    .badge b{display:block; font-size:14px; margin-bottom:3px}
+    .badge span{color:var(--muted); font-size:13px}
+    .hero-right{padding:16px; display:flex; flex-direction:column; gap:12px}
+    .mock{
+      position:relative; overflow:hidden; border-radius: 22px; border:1px solid var(--line);
+      background: radial-gradient(800px 400px at 70% 20%, rgba(255,77,109,.20), transparent 55%),
+                  linear-gradient(180deg, rgba(16,16,24,.9), rgba(16,16,24,.55));
+      min-height: 320px;
+    }
+    .mock .hint{position:absolute; inset:auto 14px 14px 14px; color:rgba(244,244,246,.9);
+               font-weight:800; font-size:14px; display:flex; gap:10px; align-items:center}
+    .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:9px 10px; border-radius: 999px; border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.25); color:rgba(255,255,255,.92); font-weight:800; font-size:13px;
+      backdrop-filter: blur(10px);
+    }
+    .mock-grid{
+      position:absolute; inset:0;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,.06) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(closest-side at 60% 35%, rgba(0,0,0,1), transparent 70%);
+      opacity:.7;
+    }
+    section{padding:22px 0}
+    .section-title{display:flex; align-items:baseline; justify-content:space-between; gap:10px; margin-bottom:12px}
+    .section-title h2{margin:0; font-size:22px}
+    .section-title p{margin:0; color:var(--muted)}
+    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap:12px}
+    .grid-2{display:grid; grid-template-columns: repeat(2, 1fr); gap:12px}
+    .tile{padding:18px; border-radius: var(--radius); border:1px solid var(--line);
+          background: rgba(16,16,24,.55)}
+    .tile h3{margin:0 0 8px; font-size:16px}
+    .tile p{margin:0; color:var(--muted); line-height:1.7}
+    .gallery{display:grid; grid-template-columns: repeat(6, 1fr); gap:10px}
+    .ph{
+      aspect-ratio: 1/1; border-radius: 16px; border:1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,77,109,.18), rgba(122,23,50,.14), rgba(255,255,255,.03));
+      overflow:hidden; position:relative;
+    }
+    .ph img{width:100%;height:100%;object-fit:cover;display:block; filter:saturate(1.05) contrast(1.03)}
+    .ph:after{
+      content:""; position:absolute; inset:0;
+      background: radial-gradient(800px 500px at 60% 0%, rgba(255,255,255,.08), transparent 55%);
+      pointer-events:none;
+    }
+    .quote{display:flex; flex-direction:column; gap:8px}
+    .quote p{margin:0; color:rgba(244,244,246,.92); line-height:1.8}
+    .quote b{color:#ffd6df}
+    .packages{display:grid; grid-template-columns: repeat(3, 1fr); gap:12px}
+    .price{font-size:26px; font-weight:900; margin:10px 0}
+    ul{margin:0; padding:0 18px 0 0; color:var(--muted); line-height:1.9}
+    .faq details{
+      border:1px solid var(--line);
+      background: rgba(16,16,24,.55);
+      border-radius: 16px;
+      padding: 12px 14px;
+    }
+    .faq summary{cursor:pointer; font-weight:900}
+    .faq p{color:var(--muted); margin:10px 0 0; line-height:1.75}
+    .form{
+      padding:18px; border-radius: var(--radius2); border:1px solid var(--line);
+      background: rgba(16,16,24,.55);
+    }
+    label{display:block; font-weight:800; margin:12px 0 6px}
+    input, textarea{
+      width:100%; border-radius: 14px; border:1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.20); color:var(--text);
+      padding:12px 12px; font-size:15px; outline:none;
+    }
+    input:focus, textarea:focus{border-color: rgba(255,77,109,.45)}
+    .row{display:grid; grid-template-columns: 1fr 1fr; gap:10px}
+    .footer{padding:22px 0 40px; color:var(--muted); border-top:1px solid var(--line); margin-top:18px}
+    .float-wa{
+      position:fixed; left:14px; bottom:14px; z-index:80;
+      display:flex; gap:10px; align-items:center;
+      padding:12px 14px; border-radius: 999px;
+      background: linear-gradient(135deg, rgba(255,77,109,.95), rgba(122,23,50,.85));
+      color:white; font-weight:900; box-shadow: 0 18px 50px rgba(0,0,0,.45);
+      border:1px solid rgba(255,255,255,.18);
+    }
+    .float-wa small{font-weight:800; opacity:.9}
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns: 1fr}
+      .badges{grid-template-columns: 1fr}
+      .grid-3{grid-template-columns: 1fr}
+      .grid-2{grid-template-columns: 1fr}
+      .packages{grid-template-columns: 1fr}
+      .gallery{grid-template-columns: repeat(3, 1fr)}
+      .row{grid-template-columns: 1fr}
+      .nav-links{display:none}
+    }
+  </style>
+
+  <!-- LocalBusiness Schema (עדכני את השדות) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "YOUR_BRAND",
+    "description": "עיצוב שיער לכלות וערב – התאמה אישית, לוקים עמידים, הגעה עד הלקוחה.",
+    "areaServed": "YOUR_CITY",
+    "telephone": "+972YOUR_PHONE",
+    "sameAs": [
+      "https://www.instagram.com/YOUR_HANDLE"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="wrap">
+      <div class="nav-inner">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <div style="font-size:14px;opacity:.95">YOUR_BRAND</div>
+            <div style="font-size:12px;color:var(--muted);font-weight:700">עיצוב שיער לכלות וערב</div>
+          </div>
+        </div>
+
+        <nav class="nav-links" aria-label="תפריט">
+          <a href="#works">עבודות</a>
+          <a href="#about">אודות</a>
+          <a href="#packages">חבילות</a>
+          <a href="#faq">שאלות נפוצות</a>
+          <a href="#contact">יצירת קשר</a>
+        </nav>
+
+        <a class="btn primary" id="topWa" href="#" rel="nofollow">לתיאום בוואטסאפ</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="card hero-left">
+            <div class="kicker">✨ לוקים עמידים • קו נקי ורומנטי • ליווי רגוע ביום האירוע</div>
+            <h1>עיצוב שיער לכלות וערב<br/>שנראה מושלם — ומחזיק עד הסוף</h1>
+            <p class="sub">
+              אני מתמחה בעיצובי שיער לכלות ואירועים: התאמה לסגנון שלך, למבנה הפנים ולשמלה —
+              עם שיטה שמחזיקה כל הערב ומצטלמת מדהים.
+              <br/>
+              <b style="color:#ffd6df">אזור שירות:</b> YOUR_CITY והסביבה • <b style="color:#ffd6df">הגעה עד אלייך</b>
+            </p>
+
+            <div class="hero-ctas">
+              <a class="btn primary" href="#contact">בדיקת זמינות לתאריך</a>
+              <a class="btn" href="#works">לצפייה בעבודות</a>
+            </div>
+
+            <div class="badges" aria-label="יתרונות">
+              <div class="badge">
+                <b>עמידות אמיתית</b>
+                <span>קיבועים חכמים שמחזיקים גם ריקודים, חום ולחות.</span>
+              </div>
+              <div class="badge">
+                <b>התאמה אישית</b>
+                <span>מוציאות לוק שמרגיש “את”, לא תחפושת.</span>
+              </div>
+              <div class="badge">
+                <b>ראש שקט</b>
+                <span>תהליך מסודר, זמינות, ותיאום קל בוואטסאפ.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card hero-right">
+            <div class="mock" role="img" aria-label="תצוגה מקדימה של גלריית עבודות">
+              <div class="mock-grid" aria-hidden="true"></div>
+              <div style="position:absolute; inset:16px; display:flex; gap:10px; flex-wrap:wrap; align-content:flex-start">
+                <span class="chip">👰🏻‍♀️ כלות</span>
+                <span class="chip">✨ ערב</span>
+                <span class="chip">📍 הגעה עד הלקוחה</span>
+                <span class="chip">📸 לוק מצטלם</span>
+              </div>
+              <div class="hint">
+                <span style="width:10px;height:10px;border-radius:999px;background:rgba(255,255,255,.9)"></span>
+                החליפי כאן לתמונה/וידאו שלך (רקע) בגלריה למטה
+              </div>
+            </div>
+
+            <div class="tile">
+              <h3 style="margin:0 0 8px">למה זה עובד אורגנית?</h3>
+              <p style="margin:0;color:var(--muted);line-height:1.75">
+                עמוד מהיר, עם תוכן אמיתי (עבודות + המלצות + FAQ) וקריאה לפעולה פשוטה –
+                זה בדיוק מה שגוגל ואינסטגרם “אוהבים”.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKS -->
+    <section id="works">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>עבודות אחרונות</h2>
+          <p>החליפי את התמונות בקבצים שלך (מומלץ 1200×1200 או יותר)</p>
+        </div>
+
+        <div class="gallery">
+          <!-- שימי תמונות בתיקיית assets ושני את src -->
+          <div class="ph"><img src="assets/work-01.jpg" alt="עיצוב שיער כלה - דוגמה 1"></div>
+          <div class="ph"><img src="assets/work-02.jpg" alt="עיצוב שיער ערב - דוגמה 2"></div>
+          <div class="ph"><img src="assets/work-03.jpg" alt="איסוף רומנטי - דוגמה 3"></div>
+          <div class="ph"><img src="assets/work-04.jpg" alt="תסרוקת גלי - דוגמה 4"></div>
+          <div class="ph"><img src="assets/work-05.jpg" alt="תסרוקת חצי אסופה - דוגמה 5"></div>
+          <div class="ph"><img src="assets/work-06.jpg" alt="תסרוקת כלה קלאסית - דוגמה 6"></div>
+          <div class="ph"><img src="assets/work-07.jpg" alt="תסרוקת ערב אלגנטית - דוגמה 7"></div>
+          <div class="ph"><img src="assets/work-08.jpg" alt="עיצוב שיער לכלה - דוגמה 8"></div>
+          <div class="ph"><img src="assets/work-09.jpg" alt="עיצוב שיער ערב - דוגמה 9"></div>
+          <div class="ph"><img src="assets/work-10.jpg" alt="שיער אסוף נמוך - דוגמה 10"></div>
+          <div class="ph"><img src="assets/work-11.jpg" alt="גלים הוליוודיים - דוגמה 11"></div>
+          <div class="ph"><img src="assets/work-12.jpg" alt="קוקו גבוה/נמוך - דוגמה 12"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT + SERVICES -->
+    <section id="about">
+      <div class="wrap">
+        <div class="grid-2">
+          <div class="tile">
+            <h3>מי אני</h3>
+            <p>
+              היי, אני <b>YOUR_NAME</b> — מעצבת שיער לכלות ואירועים.
+              אני מאמינה שלוק מושלם הוא שילוב של טכניקה, התאמה אישית, ותחושה טובה לאורך כל היום.
+              <br><br>
+              <b>הסגנון שלי:</b> נקי, רומנטי ומחמיא — עם דגש על עמידות ונראות מצטלמת מכל זווית.
+            </p>
+          </div>
+          <div class="tile">
+            <h3>מה תקבלי בשירות</h3>
+            <ul>
+              <li>אבחון קצר + התאמת לוק לשמלה, לפנים ולשיער שלך</li>
+              <li>טכניקות קיבוע שמחזיקות (גם אחרי ריקודים)</li>
+              <li>דיוק בפרטים הקטנים: פרונט, נפח, איזון, סיומת</li>
+              <li>הגעה עד אלייך (או סטודיו – לפי מה שמתאים לך)</li>
+              <li>אפשרות לליווי/טאצ׳-אפים (לפי חבילה)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section>
+      <div class="wrap">
+        <div class="section-title">
+          <h2>מילים של כלות</h2>
+          <p>שימי כאן 6–10 המלצות אמיתיות</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="tile quote">
+            <p>“החזיק לי עד 03:00 בלי לזוז. קיבלתי ים מחמאות!”</p>
+            <b>שירה · כלה</b>
+          </div>
+          <div class="tile quote">
+            <p>“רגועה, מקצועית, והלוק יצא בדיוק מה שחלמתי.”</p>
+            <b>נועה · כלה</b>
+          </div>
+          <div class="tile quote">
+            <p>“הבינה אותי מהר, התאימה לי תסרוקת מושלמת ומצטלמת.”</p>
+            <b>דנה · אירוע ערב</b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section>
+      <div class="wrap">
+        <div class="section-title">
+          <h2>איך זה עובד</h2>
+          <p>תהליך קצר וברור שמוריד לחץ ומעלה סגירות</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="tile">
+            <h3>1) בדיקת תאריך בוואטסאפ</h3>
+            <p>שולחת לך זמינות + כמה שאלות קצרות על הסגנון.</p>
+          </div>
+          <div class="tile">
+            <h3>2) התאמת לוק</h3>
+            <p>בוחרות יחד כיוון: אסוף / חצי אסוף / גלים / קלאסי / מודרני.</p>
+          </div>
+          <div class="tile">
+            <h3>3) יום האירוע</h3>
+            <p>עבודה מדויקת, קיבוע עמיד, וצילום קצר כדי שתראי מושלם.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section id="packages">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>חבילות</h2>
+          <p>אפשר לכתוב “החל מ-” אם לא רוצים מחיר מלא באתר</p>
+        </div>
+
+        <div class="packages">
+          <div class="tile">
+            <h3>חבילת ערב</h3>
+            <div class="price">החל מ- ₪XXX</div>
+            <ul>
+              <li>עיצוב שיער לאירוע</li>
+              <li>התאמה ללוק/שמלה</li>
+              <li>עמידות לאורך הערב</li>
+            </ul>
+            <div style="margin-top:14px">
+              <a class="btn" href="#contact">לפרטים</a>
+            </div>
+          </div>
+
+          <div class="tile" style="border-color: rgba(255,77,109,.35)">
+            <h3>חבילת כלה</h3>
+            <div class="price">החל מ- ₪XXX</div>
+            <ul>
+              <li>לוק כלה מלא</li>
+              <li>דיוק בפרונט + נפח</li>
+              <li>הגעה עד אלייך</li>
+              <li>אפשרות לטאצ׳-אפים</li>
+            </ul>
+            <div style="margin-top:14px">
+              <a class="btn primary" href="#contact">בדיקת זמינות</a>
+            </div>
+          </div>
+
+          <div class="tile">
+            <h3>חבילת VIP</h3>
+            <div class="price">החל מ- ₪XXX</div>
+            <ul>
+              <li>ליווי/טאצ׳-אפים לפי צורך</li>
+              <li>התאמת אקססוריז / הינומה</li>
+              <li>אופציה לעיצוב מלוות/אמא</li>
+            </ul>
+            <div style="margin-top:14px">
+              <a class="btn" href="#contact">לפרטים</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>שאלות נפוצות</h2>
+          <p>מומלץ 6–10 שאלות — זה מעולה ל-SEO</p>
+        </div>
+
+        <div class="grid-2 faq">
+          <details>
+            <summary>כמה זמן התסרוקת מחזיקה?</summary>
+            <p>המטרה היא עמידות לכל הערב. אני עובדת עם הכנות וקיבועים שמותאמים לסוג השיער ולמזג האוויר.</p>
+          </details>
+
+          <details>
+            <summary>את מגיעה עד הבית/מלון?</summary>
+            <p>כן. אפשר הגעה עד אלייך (בתיאום אזור ושעה), או סטודיו אם נוח לך.</p>
+          </details>
+
+          <details>
+            <summary>צריך ניסיון לפני?</summary>
+            <p>לא חובה, אבל לכלות שרוצות שקט מלא — ניסיון יכול לעזור לסגור את הלוק ב-100%.</p>
+          </details>
+
+          <details>
+            <summary>מה לגבי תוספות/נפח?</summary>
+            <p>אפשר לשלב תוספות/נפח לפי הצורך והסגנון. נדבר על זה בבדיקת הזמינות.</p>
+          </details>
+
+          <details>
+            <summary>איך סוגרים תאריך?</summary>
+            <p>פשוט שולחים הודעה בוואטסאפ עם התאריך, מיקום וסגנון. אם יש זמינות — סוגרים מהר ובקלות.</p>
+          </details>
+
+          <details>
+            <summary>מה מדיניות ביטול/שינוי?</summary>
+            <p>מומלץ להוסיף כאן את המדיניות שלך (מקדמה, שינוי תאריך וכו’).</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>בדיקת זמינות וקביעת תאריך</h2>
+          <p>מהיר, קצר, בלי חפירות — כדי להעלות המרות</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="form">
+            <!-- אופציה A: Formspree (חינמי עד מכסה חודשית, משתנה לפי תוכנית) -->
+            <!-- 1) צרי חשבון ב-Formspree  2) קבלי endpoint והחליפי את ה- action -->
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+              <div class="row">
+                <div>
+                  <label for="name">שם</label>
+                  <input id="name" name="name" placeholder="איך קוראים לך?" required />
+                </div>
+                <div>
+                  <label for="phone">טלפון</label>
+                  <input id="phone" name="phone" placeholder="נוח לחזור בוואטסאפ/שיחה" required />
+                </div>
+              </div>
+
+              <div class="row">
+                <div>
+                  <label for="date">תאריך אירוע</label>
+                  <input id="date" name="date" placeholder="למשל 12.06.2026" />
+                </div>
+                <div>
+                  <label for="type">סוג</label>
+                  <input id="type" name="type" placeholder="כלה / ערב / מלווה" />
+                </div>
+              </div>
+
+              <label for="msg">מה הסגנון שאת אוהבת?</label>
+              <textarea id="msg" name="message" rows="5" placeholder="אסוף נמוך, חצי אסוף, גלים… וגם איפה האירוע :)"></textarea>
+
+              <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
+                <button class="btn primary" type="submit">שליחה</button>
+                <button class="btn" type="button" id="waPrefill">שליחה בוואטסאפ במקום</button>
+              </div>
+
+              <p style="margin:12px 0 0; color:var(--muted); font-size:13px; line-height:1.6">
+                בלחיצה על שליחה בוואטסאפ — תיפתח הודעה מוכנה. אין ספאם, רק תיאום.
+              </p>
+            </form>
+          </div>
+
+          <div class="tile">
+            <h3>אפשר גם פשוט בוואטסאפ</h3>
+            <p>
+              שלחי לי:
+              <br>1) תאריך האירוע
+              <br>2) מיקום התארגנות
+              <br>3) צילום השראה (אם יש)
+              <br><br>
+              ואני חוזרת אלייך עם זמינות + המלצה ללוק שמתאים לך.
+            </p>
+
+            <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+              <a class="btn primary" id="waDirect" href="#" rel="nofollow">לוואטסאפ עכשיו</a>
+              <a class="btn" href="https://www.instagram.com/YOUR_HANDLE" target="_blank" rel="noopener">לאינסטגרם</a>
+            </div>
+
+            <div style="margin-top:14px; padding-top:14px; border-top:1px solid var(--line); color:var(--muted)">
+              <div><b style="color:#ffd6df">אזור:</b> YOUR_CITY והסביבה</div>
+              <div><b style="color:#ffd6df">טלפון:</b> 0YOUR_PHONE</div>
+              <div style="font-size:13px; margin-top:8px">© YOUR_BRAND</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap footer">
+      <div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap">
+        <div>© <span id="year"></span> YOUR_BRAND · עיצוב שיער לכלות וערב</div>
+        <div style="opacity:.9">דף אורגני מהיר · SEO בסיסי · וואטסאפ בלחיצה</div>
+      </div>
+    </div>
+  </main>
+
+  <a class="float-wa" id="waFloat" href="#" rel="nofollow" aria-label="לתיאום בוואטסאפ">
+    💬 <span>לתיאום בוואטסאפ</span> <small>תגובה מהירה</small>
+  </a>
+
+  <script>
+    // ====== הגדרות: החליפי מספר ======
+    // פורמט מומלץ: קידומת מדינה בלי +, למשל ישראל: 9725XXXXXXXX
+    const WHATSAPP_PHONE = "972YOUR_PHONE"; // לדוגמה: 972501234567
+
+    const wa = (text) => {
+      const url = "https://wa.me/" + WHATSAPP_PHONE + "?text=" + encodeURIComponent(text);
+      return url;
+    };
+
+    const defaultMsg = "היי! אשמח לבדוק זמינות 😊\n" +
+      "תאריך האירוע: \n" +
+      "סוג (כלה/ערב/מלווה): \n" +
+      "מיקום התארגנות: \n" +
+      "סגנון שאני אוהבת: \n";
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // חיבור כפתורים לוואטסאפ
+    const setHref = (id, msg) => {
+      const el = document.getElementById(id);
+      if (el) el.href = wa(msg);
+    };
+    setHref("waFloat", defaultMsg);
+    setHref("waDirect", defaultMsg);
+    setHref("topWa", defaultMsg);
+
+    // כפתור "שליחה בוואטסאפ במקום"
+    document.getElementById("waPrefill").addEventListener("click", () => {
+      // ננסה לשלוף שדות ולהכין הודעה חכמה
+      const name = document.getElementById("name").value || "";
+      const phone = document.getElementById("phone").value || "";
+      const date = document.getElementById("date").value || "";
+      const type = document.getElementById("type").value || "";
+      const msg = document.getElementById("msg").value || "";
+
+      const text =
+        "היי! אשמח לבדוק זמינות 😊\n" +
+        (name ? "שם: " + name + "\n" : "") +
+        (phone ? "טלפון: " + phone + "\n" : "") +
+        (date ? "תאריך האירוע: " + date + "\n" : "תאריך האירוע: \n") +
+        (type ? "סוג: " + type + "\n" : "סוג (כלה/ערב/מלווה): \n") +
+        (msg ? "סגנון/הערות: " + msg + "\n" : "סגנון שאני אוהבת: \n");
+
+      window.open(wa(text), "_blank");
+    });
+  </script>
+</body>
+</html>
